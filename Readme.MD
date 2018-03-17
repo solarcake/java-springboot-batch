@@ -91,7 +91,7 @@ Will return all the users of the application. More endpoints are listed below. P
 
 Requirement 1
 
-# Single user
+### Single user
 
 Request
  ```
@@ -118,21 +118,21 @@ Response
 }
  ```
  
-All Users 
+### All Users 
 ```
  http://localhost:8080/users
 ```
 
 Requirement 2
 
-Finding users based on criteria
+### Finding users based on criteria
 http://localhost:8080/users/search
 
-lists all search criteria endpoints
+- lists all search criteria endpoints
 
- - http://localhost:8080/users/search/findByNameIgnoreCaseOrSurnameIgnoreCase{?name,surname}
+http://localhost:8080/users/search/findByNameIgnoreCaseOrSurnameIgnoreCase{?name,surname}
  
- name and surname can be provided and both will ignore case. Multiple users can be returned
+- name and surname can be provided and both will ignore case. Multiple users can be returned
 
 ```
 http://localhost:8080/users/search/findByNameIgnoreCaseOrSurnameIgnoreCase?surname=smith
@@ -140,9 +140,9 @@ http://localhost:8080/users/search/findByNameIgnoreCaseOrSurnameIgnoreCase?surna
 http://localhost:8080/users/search/findByNameIgnoreCaseOrSurnameIgnoreCase?surname=smith&name=John
 
 ```
- - http://localhost:8080/users/search/findByCreditLimitLessThanEqual{?creditLimit}
+ http://localhost:8080/users/search/findByCreditLimitLessThanEqual{?creditLimit}
 
-creditLimit can be an integer or a decimal value. All users within the limit will be returned
+- creditLimit can be an integer or a decimal value. All users within the limit will be returned
 
 ```
 http://localhost:8080/users/search/findByCreditLimitLessThanEqual?creditLimit=54.50
