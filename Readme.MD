@@ -89,6 +89,10 @@ Will return all the users of the application. More endpoints are listed below. P
    ```
 ## End points
 
+Full information on each endpoint can be retrieved from the generated docs (https://github.com/solarcake/java-springboot-batch/tree/master/docs/asciidocs)
+
+A summary is provided below:
+
 Requirement 1
 
 ### Single user

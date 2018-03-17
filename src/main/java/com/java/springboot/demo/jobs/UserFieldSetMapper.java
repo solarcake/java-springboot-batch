@@ -3,7 +3,6 @@ package com.java.springboot.demo.jobs;
 import com.java.springboot.demo.model.User;
 import org.springframework.batch.item.file.mapping.FieldSetMapper;
 import org.springframework.batch.item.file.transform.FieldSet;
-
 import java.math.BigDecimal;
 
 public class UserFieldSetMapper implements FieldSetMapper<User> {
