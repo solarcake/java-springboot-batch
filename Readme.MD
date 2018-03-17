@@ -157,6 +157,9 @@ http://localhost:8080/users/search/findByCreditLimitLessThanEqual?creditLimit=54
 
 Both maven install and maven verify can be used to run tests. SearchControllerTests.java run a set of integration tests against the rest api
 
+## Notes for production
+
+In a production environment you might want to add a security layer, also the application could be dockerised as well. Also the database could be transferred from in memory to a more robust solution.
 
 ## Built With
 
