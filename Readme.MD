@@ -1,4 +1,4 @@
-# User rest point
+# User Rest: Serving users via rest
 
 This application provides rest endpoints for searching of users which are loading in the application from a csv file called "Workbook.csv" located in the resources folder.
 
@@ -49,10 +49,10 @@ both maven install and maven verify can be used to run tests. SearchControllerTe
 
 ## Built With
 
-* [Spring boot](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Spring boot](https://github.com/solarcake/java-springboot-batch) - Creating standalone spring applications
 * [Maven](https://maven.apache.org/) - Dependency Management
-* [Spring Batch](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-* [HSQL]
+* [Spring Batch](https://projects.spring.io/spring-batch/) - Lightweight comprehensive batch framework
+* [HSQL] (http://hsqldb.org/) - In memory database
 
 
 ## Authors
