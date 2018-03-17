@@ -9,38 +9,6 @@
 |`String`
 |Link current endpoint with extra options
 
-|`_links.self.templated`
-|`Boolean`
-|indicating if the endpoint is results in a template format
-
-|`_links.profile.href`
-|`String`
-|Link current endpoint with extra options
-
-|`_links.search.href`
-|`String`
-|search endpoint
-
-|`page`
-|`Object`
-|paging values
-
-|`page.size`
-|`Number`
-|The page size
-
-|`page.totalElements`
-|`Number`
-|total amount of users for all pages
-
-|`page.totalPages`
-|`Number`
-|total amount of pages for this request
-
-|`page.number`
-|`Number`
-|current page number
-
 |`_embedded`
 |`Object`
 |user result payload

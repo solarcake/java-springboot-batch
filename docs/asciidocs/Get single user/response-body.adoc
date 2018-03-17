@@ -1,0 +1,20 @@
+[source,options="nowrap"]
+----
+{
+  "name" : "Paul",
+  "surname" : "Anderson",
+  "address" : "Dorpsplein 3A",
+  "postCode" : "4532 AA",
+  "phone" : "030 3458986",
+  "creditLimit" : 109093.00,
+  "birthday" : "02/01/1965",
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/users/1"
+    },
+    "user" : {
+      "href" : "http://localhost:8080/users/1"
+    }
+  }
+}
+----

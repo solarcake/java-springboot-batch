@@ -1,0 +1,49 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/hal+json;charset=UTF-8
+Content-Length: 1016
+
+{
+  "_embedded" : {
+    "users" : [ {
+      "name" : "John",
+      "surname" : "Johnson",
+      "address" : "Voorstraat 32",
+      "postCode" : "3122gg",
+      "phone" : "020 3849381",
+      "creditLimit" : 10000.00,
+      "birthday" : "31/12/1986",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/0"
+        },
+        "user" : {
+          "href" : "http://localhost:8080/users/0"
+        }
+      }
+    }, {
+      "name" : "John",
+      "surname" : "Smith",
+      "address" : "Barkestrase 32",
+      "postCode" : "87823",
+      "phone" : "+44 728 889838",
+      "creditLimit" : 9898.30,
+      "birthday" : "19/01/1999",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/6"
+        },
+        "user" : {
+          "href" : "http://localhost:8080/users/6"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/users/search/findByNameIgnoreCaseOrSurnameIgnoreCase?name=John&surname=wick"
+    }
+  }
+}
+----

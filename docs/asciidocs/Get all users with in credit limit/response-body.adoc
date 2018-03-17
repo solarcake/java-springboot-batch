@@ -1,0 +1,45 @@
+[source,options="nowrap"]
+----
+{
+  "_embedded" : {
+    "users" : [ {
+      "name" : "Pat",
+      "surname" : "Benetar",
+      "address" : "Driehoog 3zwart",
+      "postCode" : "2340 CC",
+      "phone" : "06-28938945",
+      "creditLimit" : 54.00,
+      "birthday" : "03/01/1964",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/3"
+        },
+        "user" : {
+          "href" : "http://localhost:8080/users/3"
+        }
+      }
+    }, {
+      "name" : "Mal",
+      "surname" : "Gibson",
+      "address" : "Vredenburg 21",
+      "postCode" : "3209 DD",
+      "phone" : "06-48958986",
+      "creditLimit" : 54.50,
+      "birthday" : "08/01/1978",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/4"
+        },
+        "user" : {
+          "href" : "http://localhost:8080/users/4"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/users/search/findByCreditLimitLessThanEqual?creditLimit=54.50"
+    }
+  }
+}
+----

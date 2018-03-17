@@ -93,6 +93,7 @@ public class User implements Serializable {
     public String toString() {
         return "UserDTO{" +
                 "name='" + name + '\'' +
+                "surname='" + surname + '\'' +
                 ", address='" + address + '\'' +
                 ", postCode='" + postCode + '\'' +
                 ", phone='" + phone + '\'' +

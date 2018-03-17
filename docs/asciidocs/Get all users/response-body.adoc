@@ -101,7 +101,7 @@
     }, {
       "name" : "John",
       "surname" : "Smith",
-      "address" : "B���rkestra���e 32",
+      "address" : "Barkestrase 32",
       "postCode" : "87823",
       "phone" : "+44 728 889838",
       "creditLimit" : 9898.30,
