@@ -1,8 +1,8 @@
 # User Rest: Serving users via rest
 
-This application provides rest endpoints for searching of users which are loading in the application from a csv file called "Workbook.csv" located in the resources folder.
+This application provides rest endpoints for searching of users which are loading in the application from a csv file called "Workbook.csv" located in the resources folder. Ideally this should be placed outside the application
 
-Note that this has been moved from its original path. 
+Note that this has been moved from its original path. The csv has been kept in its original state, the name field is parsed as name and surname based on the comma separator. Any entries which give an exception during parsing would be skipped. 
 
 As an IDE I used intellij, the technology list is given at the end of the file but the basic process is as follows.
 
