@@ -38,21 +38,128 @@ Java can be downloaded here: http://www.oracle.com/technetwork/java/javase/downl
 mvn install
 ```
 
-- Bring up the application using 
+- Bring up the application using maven as well, run the following commang
 
-End with an example of getting some data out of the system or using it for a little demo
+ ```
+ mvn spring-boot:run
+ ```
+
+- The application is exposed on port 8080
+
+ ```
+http://localhost:8080/users
+ ```
+Will return all the users of the application. More endpoints are listed below. Please refer to the docs/html section for a full list of this rest API
+ ```
+{
+  "_embedded" : {
+    "users" : [ {
+      "name" : "John",
+      "surname" : "Johnson",
+      "address" : "Voorstraat 32",
+      "postCode" : "3122gg",
+      "phone" : "020 3849381",
+      "creditLimit" : 10000.00,
+      "birthday" : "31/12/1986",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/0"
+        },
+        "user" : {
+          "href" : "http://localhost:8080/users/0"
+        }
+      }
+    }, {
+      "name" : "Paul",
+      "surname" : "Anderson",
+      "address" : "Dorpsplein 3A",
+      "postCode" : "4532 AA",
+      "phone" : "030 3458986",
+      "creditLimit" : 109093.00,
+      "birthday" : "02/01/1965",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/1"
+        },
+        "user" : {
+          "href" : "http://localhost:8080/users/1"
+        }
+      } 
+      ...
+   ```
+## End points
+
+Requirement 1
+
+# Single user
+
+Request
+ ```
+ http://localhost:8080/users/1
+ ```
+Response
+ ```
+{
+  "name" : "Paul",
+  "surname" : "Anderson",
+  "address" : "Dorpsplein 3A",
+  "postCode" : "4532 AA",
+  "phone" : "030 3458986",
+  "creditLimit" : 109093.00,
+  "birthday" : "02/01/1965",
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/users/1"
+    },
+    "user" : {
+      "href" : "http://localhost:8080/users/1"
+    }
+  }
+}
+ ```
+ 
+All Users 
+```
+ http://localhost:8080/users
+```
+
+Requirement 2
+
+Finding users based on criteria
+http://localhost:8080/users/search
+
+lists all search criteria endpoints
+
+ - http://localhost:8080/users/search/findByNameIgnoreCaseOrSurnameIgnoreCase{?name,surname}
+ 
+ name and surname can be provided and both will ignore case. Multiple users can be returned
+
+```
+http://localhost:8080/users/search/findByNameIgnoreCaseOrSurnameIgnoreCase?surname=smith
+
+http://localhost:8080/users/search/findByNameIgnoreCaseOrSurnameIgnoreCase?surname=smith&name=John
+
+```
+ - http://localhost:8080/users/search/findByCreditLimitLessThanEqual{?creditLimit}
+
+creditLimit can be an integer or a decimal value. All users within the limit will be returned
+
+```
+http://localhost:8080/users/search/findByCreditLimitLessThanEqual?creditLimit=54.50
+
+```
 
 ## Running the tests
 
-both maven install and maven verify can be used to run tests. SearchControllerTests.java run a set of integration tests against the rest api
+Both maven install and maven verify can be used to run tests. SearchControllerTests.java run a set of integration tests against the rest api
 
 
 ## Built With
 
-* [Spring boot](https://github.com/solarcake/java-springboot-batch) - Creating standalone spring applications
+* [Spring boot](https://projects.spring.io/spring-boot/) - Creating standalone spring applications
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Spring Batch](https://projects.spring.io/spring-batch/) - Lightweight comprehensive batch framework
-* [HSQL] (http://hsqldb.org/) - In memory database
+* [HSQL](http://hsqldb.org/) - In memory database
 
 
 ## Authors

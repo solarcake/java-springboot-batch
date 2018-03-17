@@ -105,7 +105,7 @@ public class SearchControllerTests {
 
     @Test
     public void getUsersWithASpecifiedNameOrSurname() throws Exception {
-        this.mvc.perform(get("/users/search/findByNameOrSurnameIgnoreCase?name=John&surname=wick"))
+        this.mvc.perform(get("/users/search/findByNameIgnoreCaseOrSurnameIgnoreCase?name=John&surname=wick"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$._embedded.users[0].name").value("John"))
                 .andExpect(jsonPath("$._embedded.users[0].surname").value("Johnson"))
@@ -116,7 +116,7 @@ public class SearchControllerTests {
 
     @Test
     public void getUsersWithASpecifiedNameOrSurnameWithLowerCase() throws Exception {
-        this.mvc.perform(get("/users/search/findByNameOrSurnameIgnoreCase?surname=gibson"))
+        this.mvc.perform(get("/users/search/findByNameIgnoreCaseOrSurnameIgnoreCase?surname=gibson"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$._embedded.users[0].name").value("Mal"))
                 .andExpect(jsonPath("$._embedded.users[0].surname").value("Gibson"))

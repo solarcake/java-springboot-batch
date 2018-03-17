@@ -8,6 +8,6 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public interface UserRepository extends JpaRepository<User, Long> {
-    List<User> findByNameOrSurnameIgnoreCase(@Param("name") String name, @Param("surname") String surname);
+    List<User> findByNameIgnoreCaseOrSurnameIgnoreCase(@Param("name") String name, @Param("surname") String surname);
     List<User> findByCreditLimitLessThanEqual(@Param("creditLimit") BigDecimal creditLimit);
 }
