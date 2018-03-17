@@ -1,0 +1,10 @@
+DROP TABLE USERS IF EXISTS;
+CREATE TABLE USERS(
+  id INTEGER IDENTITY,
+  name VARCHAR(50) NULL,
+  surname VARCHAR(50) NULL,
+  address VARCHAR(100) NULL,
+  postcode VARCHAR(10) NULL,
+  phone VARCHAR(20) NULL,
+  creditLimit NUMERIC(10,2),
+  birthday DATE);

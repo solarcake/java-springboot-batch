@@ -1,0 +1,142 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/hal+json;charset=UTF-8
+Content-Length: 3312
+
+{
+  "_embedded" : {
+    "users" : [ {
+      "name" : "John",
+      "surname" : "Johnson",
+      "address" : "Voorstraat 32",
+      "postCode" : "3122gg",
+      "phone" : "020 3849381",
+      "creditLimit" : 10000.00,
+      "birthday" : "31/12/1986",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/0"
+        },
+        "user" : {
+          "href" : "http://localhost:8080/users/0"
+        }
+      }
+    }, {
+      "name" : "Paul",
+      "surname" : "Anderson",
+      "address" : "Dorpsplein 3A",
+      "postCode" : "4532 AA",
+      "phone" : "030 3458986",
+      "creditLimit" : 109093.00,
+      "birthday" : "02/01/1965",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/1"
+        },
+        "user" : {
+          "href" : "http://localhost:8080/users/1"
+        }
+      }
+    }, {
+      "name" : "Steve",
+      "surname" : "Wicket",
+      "address" : "Mendelssohnstraat 54d",
+      "postCode" : "3423 ba",
+      "phone" : "0313-398475",
+      "creditLimit" : 934.00,
+      "birthday" : "02/01/1964",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/2"
+        },
+        "user" : {
+          "href" : "http://localhost:8080/users/2"
+        }
+      }
+    }, {
+      "name" : "Pat",
+      "surname" : "Benetar",
+      "address" : "Driehoog 3zwart",
+      "postCode" : "2340 CC",
+      "phone" : "06-28938945",
+      "creditLimit" : 54.00,
+      "birthday" : "03/01/1964",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/3"
+        },
+        "user" : {
+          "href" : "http://localhost:8080/users/3"
+        }
+      }
+    }, {
+      "name" : "Mal",
+      "surname" : "Gibson",
+      "address" : "Vredenburg 21",
+      "postCode" : "3209 DD",
+      "phone" : "06-48958986",
+      "creditLimit" : 54.50,
+      "birthday" : "08/01/1978",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/4"
+        },
+        "user" : {
+          "href" : "http://localhost:8080/users/4"
+        }
+      }
+    }, {
+      "name" : "User",
+      "surname" : "Friendly",
+      "address" : "Sint Jansstraat 32",
+      "postCode" : "4220 EE",
+      "phone" : "0885-291029",
+      "creditLimit" : 63.60,
+      "birthday" : "09/01/1980",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/5"
+        },
+        "user" : {
+          "href" : "http://localhost:8080/users/5"
+        }
+      }
+    }, {
+      "name" : "John",
+      "surname" : "Smith",
+      "address" : "B���rkestra���e 32",
+      "postCode" : "87823",
+      "phone" : "+44 728 889838",
+      "creditLimit" : 9898.30,
+      "birthday" : "19/01/1999",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/6"
+        },
+        "user" : {
+          "href" : "http://localhost:8080/users/6"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/users{?page,size,sort}",
+      "templated" : true
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/profile/users"
+    },
+    "search" : {
+      "href" : "http://localhost:8080/users/search"
+    }
+  },
+  "page" : {
+    "size" : 20,
+    "totalElements" : 7,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}
+----
