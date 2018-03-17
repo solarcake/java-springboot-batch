@@ -89,7 +89,7 @@ Will return all the users of the application. More endpoints are listed below. P
    ```
 ## End points
 
-Full information on each endpoint can be retrieved from the generated docs (https://github.com/solarcake/java-springboot-batch/tree/master/docs/asciidocs)
+Full information (sample, request and responses and also a full description of each returned entity) on each endpoint can be retrieved from the generated docs (https://github.com/solarcake/java-springboot-batch/tree/master/docs/asciidocs)
 
 A summary is provided below:
 
